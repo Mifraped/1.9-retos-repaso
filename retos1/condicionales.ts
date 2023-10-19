@@ -15,7 +15,7 @@ function functionZodiac(day:number, month:number):string{
     else signo ="No has introducido una fecha valida";
     return signo
 }
-console.log(functionZodiac(23,3));
+// console.log(functionZodiac(23,3));
 
 function continent(country:string):void{
     let America = ["Venezuela", "Brasil", "Mexico", "Canada", "EEUU"]
@@ -29,10 +29,10 @@ function continent(country:string):void{
     if(Asia.indexOf(country) >= 0) console.log("Asia");
     if(Oceania.indexOf(country) >= 0) console.log("Oceania"); 
 }
-continent("Samoa")
+// continent("Samoa")
 
-function isEven(number:number):string{
+export function isEven(number:number):string{
     return number % 2 === 0 ? "El numero es par" : "El numero es impar"
 }
-console.log(isEven(3));
+// console.log(isEven(3));
 
