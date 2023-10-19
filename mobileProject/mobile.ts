@@ -36,4 +36,11 @@ export class Mobile{
     public getPrice():number{
         return this.price
     }
+    public toString():string{
+        let cadena = "The characteristics of the mobile name are:" + "\n"
+        for(let carac in this){
+            if(typeof this[carac] !== "function") cadena += carac + ": " + this[carac] + "\n"
+        }
+        return cadena
+    }
 }
