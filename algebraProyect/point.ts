@@ -21,7 +21,7 @@ export class Point{
     public distanceToOrigin():number{
         return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2))
     }
-    public claculateDistance(anotherPoint:Point):number{
+    public calculateDistance(anotherPoint:Point):number{
         return Math.sqrt(Math.pow(this.x - anotherPoint.x, 2) + Math.pow(this.y - anotherPoint.y, 2))
     }
     public calculateQuadrant():number{
@@ -32,5 +32,17 @@ export class Point{
         else if(this.x > 0 && this.y < 0) cuadrante = 4
 
         return cuadrante
+    }
+    public calculateNearest(points:Point[]):Point{
+        let distanciaMenor = Number.MAX_VALUE
+        let puntoMenor = new Point(0,0)
+        for(let punto of points){
+            let distancia = this.calculateDistance(punto)
+            if(distancia < distanciaMenor){
+                distanciaMenor = distancia
+                puntoMenor = punto
+            }
+        }
+        return puntoMenor
     }
 }
