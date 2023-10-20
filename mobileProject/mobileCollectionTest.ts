@@ -16,5 +16,8 @@ myCollection.setMobiles([new Mobile("Justino", "Huawei", "TS10", "blanco", 135),
 console.log(myCollection.getTotalPrice());
 console.log(myCollection.getMobiles());
 
-let myCollection2 = new MobileCollection([mobile1, mobile2])
+let myCollection2 = new MobileCollection([mobile1, mobile2,mobile3])
 console.log(myCollection2.getTotalPrice());
+console.log(myCollection2.printCollection());
+
+

@@ -21,4 +21,7 @@ export class MobileCollection{
     private totalPriceCalculation():number{
         return this.mobiles.reduce((acum, act) => acum + act.getPrice(), 0)
     }
+    public printCollection():string{
+        return this.mobiles.reduce((acum, act) => acum += act.toString(), "These are all my mobiles:" + "\n" +  "\n") + "\n" + `Price overall: ${this.totalPrice}`
+    }
 }
